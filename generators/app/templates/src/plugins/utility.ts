@@ -99,9 +99,9 @@ export const isEmptyValue = (val: any): boolean => {
     return false;
 };
 
-export const getGroupedApps = (apps: Ewsedu.Business.AppItem[]): { text: string; children: Ewsedu.Business.AppItem[] }[] => {
-    const groupedApps: { text: string; children: Ewsedu.Business.AppItem[] }[] = [];
-    apps.forEach((item: Ewsedu.Business.AppItem) => {
+export const getGroupedApps = (apps: Code.AppItem[]): { text: string; children: Code.AppItem[] }[] => {
+    const groupedApps: { text: string; children: Code.AppItem[] }[] = [];
+    apps.forEach((item: Code.AppItem) => {
         // 图标颜色处理
         if (!item.color) {
             item.color = generateRandomColorValue();

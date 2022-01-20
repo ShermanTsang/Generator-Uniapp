@@ -45,6 +45,8 @@ declare namespace Plugin {
 
             request(): Plugin.Api.BaseResponse;
         }
+
+        export type Service = {};
     }
     declare namespace Logger {
         export type PrintToConsole = (target: any, name?: string) => void;
@@ -54,8 +56,7 @@ declare namespace Plugin {
     }
     declare namespace Utility {}
     declare namespace Vuex {
-        export interface StoreRootState {
-        }
+        export interface StoreRootState {}
     }
     declare namespace Mixin {
         export type UseMethodItem = {

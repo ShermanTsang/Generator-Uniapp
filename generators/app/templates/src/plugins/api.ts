@@ -5,7 +5,7 @@ export const [AppRequest] = [
     new Request({
         baseURL: process.env.VUE_APP_API_BASEURL_APP,
         timeout: 300000
-    }),
+    })
 ];
 
 const utilities = {
@@ -19,11 +19,6 @@ AppRequest.interceptors.request.use(
         const state = Store.state as Plugin.Vuex.StoreRootState;
         const getters = Store.getters as any;
         if (config.header) {
-            state.accessToken && (config.header['x-moe-access-token'] = state.accessToken);
-            if (getters.activeIdentity && 'type' in getters.activeIdentity && 'id' in getters.activeIdentity) {
-                config.header['x-moe-identity-type'] = getters.activeIdentity.type;
-                config.header['x-moe-identity-id'] = getters.activeIdentity.id;
-            }
         }
         if (config.custom && config.custom.showLoading) {
             uni.showLoading({
@@ -83,7 +78,7 @@ class ApiRequest implements Plugin.Api.RequestWrapper {
     _filePath: Plugin.Api.RequestWrapper['_filePath'] = undefined;
     _formData: Plugin.Api.RequestWrapper['_formData'] = undefined;
 
-    constructor(service: Ewsedu.Business.ApiService, name?: string) {
+    constructor(service: Plugin.Api.Service, name?: string) {
         this._instance = instances[service];
         if (name) {
             this._custom['name'] = name;
@@ -91,7 +86,7 @@ class ApiRequest implements Plugin.Api.RequestWrapper {
         return this;
     }
 
-    service(service: Ewsedu.Business.ApiService): this {
+    service(service: Plugin.Api.Service): this {
         this._instance = instances[service];
         return this;
     }
