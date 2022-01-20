@@ -1,0 +1,70 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
+      "^ui-(.*)": "@/components/ui/$1.vue"
+    }
+  },
+  "pages": [
+    {
+      "path": "pages/app/index",
+      "style": {
+        "navigationBarTitleText": "应用",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/trend/index",
+      "style": {
+        "navigationBarTitleText": "动态",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/user/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#ffffff",
+    "navigationBarShadow": {
+      "colorType": "gary"
+    }
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#4C5BF1",
+    "borderStyle": "black",
+    "spacing": "4px",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/trend/index",
+        "iconPath": "static/image/icon-trend.png",
+        "selectedIconPath": "static/image/icon-trend-active.png",
+        "text": "动态"
+      },
+      {
+        "pagePath": "pages/app/index",
+        "iconPath": "static/image/icon-app.png",
+        "selectedIconPath": "static/image/icon-app-active.png",
+        "text": "应用"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "static/image/icon-user.png",
+        "selectedIconPath": "static/image/icon-user-active.png",
+        "text": "我的"
+      }
+    ]
+  }
+}
