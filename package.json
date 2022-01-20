@@ -1,8 +1,8 @@
 {
-  "name": "generator-uni-app",
+  "name": "generator-sherman-uni-app",
   "version": "0.0.0",
   "description": "Personal uni-app project scaffolding",
-  "homepage": "https://share-man.com",
+  "homepage": "https://github.com/ShermanTsang/Generator-Uniapp",
   "author": {
     "name": "ShareManT",
     "email": "sharemant@163.com",
@@ -75,6 +75,6 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "ShermanTsang/generator-uni-app",
+  "repository": "ShermanTsang/Generator-Uniapp",
   "license": "Apache-2.0"
 }
