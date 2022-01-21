@@ -1,4 +1,4 @@
-# test
+# <%= name %>
 
 ## Project setup
 

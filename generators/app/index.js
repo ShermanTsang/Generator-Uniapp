@@ -6,7 +6,7 @@ const Generator = require("yeoman-generator");
 
 module.exports = class extends Generator {
   prompting() {
-    this.log(yosay("Welcome to the sherman-uniapp generator!"));
+    this.log(yosay("Welcome to the uniapp generator!"));
     return this.prompt([
       {
         type: "input",
@@ -22,7 +22,7 @@ module.exports = class extends Generator {
   wirting() {
     const tmpDir = this.templatePath();
     const context = this.answers;
-    console.log("tmpDir", tmpDir);
+    console.log(tmpDir);
     const tempList = [];
 
     function fileDisplay(filePath) {
