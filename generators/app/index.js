@@ -1,27 +1,31 @@
 const yosay = require("yosay");
 const path = require("path");
 const fs = require("fs");
+const chalk = require("chalk");
 
 const Generator = require("yeoman-generator");
 
 module.exports = class extends Generator {
   prompting() {
-    this.log(yosay("Welcome to the uniapp generator!"));
-    return this.prompt([
+    this.log(yosay(`Welcome to the ${chalk.red("sherman-uniapp")} generator!`));
+    const prompts = [
       {
         type: "input",
         name: "name",
         message: "The name of your project?",
         default: this.appname
       }
-    ]).then(answers => {
-      this.answers = answers;
+    ];
+
+    return this.prompt(prompts).then(props => {
+      // To access props later use this.props.someAnswer;
+      this.props = props;
     });
   }
 
-  wirting() {
+  writing() {
     const tmpDir = this.templatePath();
-    const context = this.answers;
+    const context = this.props;
     console.log(tmpDir);
     const tempList = [];
 
@@ -49,5 +53,9 @@ module.exports = class extends Generator {
         context
       );
     });
+  }
+
+  install() {
+    this.installDependencies();
   }
 };
