@@ -1,7 +1,7 @@
 {
   "name": "generator-sherman-uniapp",
-  "version": "0.0.2",
-  "description": "Personal uni-app project scaffolding",
+  "version": "0.0.4",
+  "description": "personal uni-app project scaffolding",
   "homepage": "https://github.com/ShermanTsang/Generator-Uniapp",
   "author": {
     "name": "ShareManT",
