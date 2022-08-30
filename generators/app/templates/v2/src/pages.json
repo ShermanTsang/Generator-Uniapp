@@ -14,23 +14,23 @@
         "navigationStyle": "custom",
         "enablePullDownRefresh": true
       }
-    },
-    {
-      "path": "pages/trend/index",
-      "style": {
-        "navigationBarTitleText": "动态",
-        "navigationStyle": "custom",
-        "enablePullDownRefresh": true
-      }
-    },
-    {
-      "path": "pages/user/index",
-      "style": {
-        "navigationBarTitleText": "我的",
-        "navigationStyle": "custom"
-      }
     }
   ],
+  "subPackages": [
+    {
+      "root": "subPackages/app/pages",
+      "pages": [
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/app": {
+      "network": "all",
+      "packages": [
+        "subPackages/app/pages"
+      ]
+    }
+  },
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
