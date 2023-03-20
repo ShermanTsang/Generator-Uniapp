@@ -3,7 +3,6 @@ declare namespace Plugin {
         import HttpRequest, { HttpRequestConfig, HttpResponse } from 'luch-request';
 
         export type BaseResponse = Promise<HttpResponse<T>>['data'];
-
         export interface RequestWrapper {
             _instance: HttpRequest | null;
             _method: HttpRequestConfig['method'] | null;
