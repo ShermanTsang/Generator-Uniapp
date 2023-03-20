@@ -1,7 +1,7 @@
 {
     "name" : "myApp",
     "appid" : "__UNI__32D2897",
-    "description" : "学拓帮用户端",
+    "description" : "myApp",
     "versionName" : "1.0.0",
     "versionCode" : "100",
     "transformPx" : false,
@@ -108,7 +108,7 @@
         }
     },
     "h5" : {
-        "title" : "学拓帮",
+        "title" : "myApp",
         "router" : {
             "mode" : "history"
         },

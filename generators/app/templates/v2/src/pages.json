@@ -8,7 +8,7 @@
   },
   "pages": [
     {
-      "path": "pages/app/index",
+      "path": "pages/index",
       "style": {
         "navigationBarTitleText": "应用",
         "navigationStyle": "custom",

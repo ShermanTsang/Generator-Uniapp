@@ -24,6 +24,7 @@
       "/@types/*": ["./src/types/*"],
       "/@assets/*": ["./src/assets/*"],
       "/@plugins/*": ["./src/plugins/*"],
+      "/@apps/*": ["./src/subPackages/app/*"]
     },
     "lib": [
       "esnext",

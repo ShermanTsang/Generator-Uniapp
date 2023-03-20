@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue from "vue";
 
 interface DataType extends Partial<Code.BaseDataType> {
     state: {
@@ -74,7 +74,7 @@ export default Vue.extend({
     computed: {
         activeTabKey(): string {
             if (!this.activeTab && this.autoSetDefaultValue) {
-                const list = this.list as Ewsedu.Component.TabItem[];
+                const list = this.list as Business.Component.TabItem[];
                 return list[0].key;
             }
             return this.activeTab;
@@ -86,7 +86,7 @@ export default Vue.extend({
         }
     },
     methods: {
-        clickItem(item: Ewsedu.Component.TabItem) {
+        clickItem(item: Business.Component.TabItem) {
             this.state.activeTabKey = item.key;
             this.$emit('click', item);
             this.$emit('update:activeTab', item.value || item.key);

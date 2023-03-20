@@ -1,5 +1,5 @@
-import Request, { HttpRequestConfig } from 'luch-request';
-import Store from '/@plugins/vuex';
+import Request, { HttpRequestConfig } from "luch-request";
+import Store from "/@plugins/vuex";
 
 export const [AppRequest] = [
     new Request({
@@ -34,30 +34,30 @@ AppRequest.interceptors.request.use(
 
 AppRequest.interceptors.response.use(
     (response) => {
-        if (response.config.custom && response.config.custom.showLoading) {
-            uni.hideLoading();
-        }
-        if (response.statusCode === 200) {
-            if (response.data.error === 1) {
-                const backendErrorTip = response.data.data || '请求异常';
-                uni.showToast({
-                    title: utilities.generateApiName(response.config) + backendErrorTip,
-                    icon: 'none'
-                });
-                return Promise.reject(response);
-            }
-            return response.data.data;
-        }
+        // if (response.config.custom && response.config.custom.showLoading) {
+        //     uni.hideLoading();
+        // }
+        // if (response.statusCode === 200) {
+        //     if (response.data.error === 1) {
+        //         const backendErrorTip = response.data.data || '请求异常';
+        //         uni.showToast({
+        //             title: utilities.generateApiName(response.config) + backendErrorTip,
+        //             icon: 'none'
+        //         });
+        //         return Promise.reject(response);
+        //     }
+        //     return response.data.data;
+        // }
         return response;
     },
     (response) => {
-        uni.showToast({
-            title: utilities.generateApiName(response.config) + '请求异常',
-            icon: 'none'
-        });
-        if (response.statusCode !== 200) {
-            return Promise.reject(response);
-        }
+        // uni.showToast({
+        //     title: utilities.generateApiName(response.config) + '请求异常',
+        //     icon: 'none'
+        // });
+        // if (response.statusCode !== 200) {
+        //     return Promise.reject(response);
+        // }
         return response;
     }
 );
@@ -78,8 +78,9 @@ class ApiRequest implements Plugin.Api.RequestWrapper {
     _filePath: Plugin.Api.RequestWrapper['_filePath'] = undefined;
     _formData: Plugin.Api.RequestWrapper['_formData'] = undefined;
 
-    constructor(service: Plugin.Api.Service, name?: string) {
-        this._instance = instances[service];
+    constructor(service: string, name?: string) {
+        // @ts-ignore
+      this._instance = instances[service];
         if (name) {
             this._custom['name'] = name;
         }
@@ -87,7 +88,8 @@ class ApiRequest implements Plugin.Api.RequestWrapper {
     }
 
     service(service: Plugin.Api.Service): this {
-        this._instance = instances[service];
+        // @ts-ignore
+      this._instance = instances[service];
         return this;
     }
 

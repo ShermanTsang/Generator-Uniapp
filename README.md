@@ -23,6 +23,7 @@ The integrated technology stacks and plugins are listed bellow.
 | code style linter       | Prettier             |
 | code format linter      | Eslint               |
 | icon font service       | IconFont             |
+| compile tool            | Webpack              |
 
 ## Vue3 based Version
 
@@ -35,6 +36,7 @@ The integrated technology stacks and plugins are listed bellow.
 | post CSS processor      | SASS                 |
 | code style linter       | Prettier             |
 | code format linter      | Eslint               |
+| compile tool            | Vite                 |
 
 ## Installation
 

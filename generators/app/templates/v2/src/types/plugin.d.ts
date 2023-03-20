@@ -14,9 +14,9 @@ declare namespace Plugin {
             _filePath: string | undefined;
             _formData: Utility.AnyObject | undefined;
 
-            new (service: Ewsedu.ApiService, name?: string): this;
+            new (service: string, name?: string): this;
 
-            service(service: Ewsedu.ApiService): this;
+            service(service: string): this;
 
             get(url: string): this;
 
@@ -32,7 +32,7 @@ declare namespace Plugin {
 
             file(file: FormData | File | undefined): this;
 
-            formData(formDataObject: Ewsedu.OSS.AnyObject): this;
+            formData(formDataObject: Business.OSS.AnyObject): this;
 
             filePath(file: string | undefined): this;
 
